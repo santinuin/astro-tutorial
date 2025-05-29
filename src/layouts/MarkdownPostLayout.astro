@@ -9,13 +9,13 @@ const { frontmatter } = Astro.props;
             new Date(frontmatter.pubDate).toLocaleString("es-AR", {
                 timeZone: "UTC",
                 year: "numeric",
-            month: "numeric",
-            day: "numeric",
-        })
-    }
-</p>
-<p>Written by: {frontmatter.author}</p>
-<p><em>{frontmatter.description}</em></p>
-<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-<slot />
+                month: "numeric",
+                day: "numeric",
+            })
+        }
+    </p>
+    <p>Written by: {frontmatter.author}</p>
+    <p><em>{frontmatter.description}</em></p>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <slot />
 </BaseLayout>
